@@ -10,7 +10,7 @@ function addItem(e) {
     e.preventDefault();
 
     let item = document.querySelector('#item').value;
-    console.log(item);
+    if (!item) return;
 
     const li = document.createElement('li');
     li.className = 'list-group-item';
