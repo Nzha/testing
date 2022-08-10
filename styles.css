@@ -1,36 +1,7 @@
-/* * {
-    border: 1px solid red;
-} */
-
-html {
-    box-sizing: border-box;
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 form {
-    width: 30%;
-}
-
-fieldset {
-    display: flex;
-    flex-direction: column;
+  margin: 0 auto;
+  width: 400px;
+  /* padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em; */
 }
