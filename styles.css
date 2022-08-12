@@ -1,7 +1,36 @@
-form {
-  margin: 0 auto;
-  width: 400px;
-  /* padding: 1em;
-  border: 1px solid #CCC;
-  border-radius: 1em; */
+body {
+  font  : 1.3rem sans-serif;
+  padding : 0.5em;
+  margin  : 0;
+  background : #222;
 }
+
+form {
+  position : relative;
+  width  : 740px;
+  height : 498px;
+  margin : 0 auto;
+  padding: 1em;
+  box-sizing: border-box;
+  background : #FFF url(background.jpg);
+
+  /* we create our grid */
+  display  : grid;
+  grid-gap : 20px;
+  grid-template-columns : repeat(2, 1fr);
+  grid-template-rows    : 10em 1em 1em 1em;
+}
+
+h1 {
+  font : 1em "typewriter", monospace;
+  align-self : end;
+}
+
+#message {
+   grid-row: 1 / 5;
+}
+
+#from, #reply {
+   display: flex;
+}
+
