@@ -5,7 +5,7 @@
 body {
   background-color: #fff;
   color: #333;
-  font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: 1em;
   margin: 0;
 }
@@ -20,36 +20,34 @@ select {
   font-family: inherit;
   font-size: 100%;
   padding: 0; margin: 0;
-}
-
-input[type="search"] {
   appearance: none;
-  width: 250px;
-  height: 35px;
-  border: 1px solid lightgrey;
-  border-radius: 10px;
-  padding: 0 0.5rem;
 }
 
-input[type="search"]:hover,
-input[type="search"]:focus {
-  outline: none;
-  border-color: grey;
-  box-shadow: 0px 5px 5px #cfcfcf;
+li {
+  display: flex;
+  gap: 0.5rem;
 }
 
-input + span {
+input[type="radio"] {
   position: relative;
+  width: 18px;
+  height: 18px;
+  border: 1px solid darkgrey;
+  border-radius: 50%;
 }
 
-input + span::after {
+input[type="radio"]::before {
+  /* display: block; */
+  content: " ";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  /* font-size: 1.2em; */
+}
+
+input[type="radio"]:checked::before {
   position: absolute;
-  top: -3px;
-  left: 10px;
-  content: url(https://github.com/mdn/learning-area/blob/main/html/forms/tasks/advanced-styling/search-24px.png?raw=true);
-}
-
-
-input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
-  display: none;
+  background-color: red;
+  left: 1.2px;
+  top: 1.5px;
 }
