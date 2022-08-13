@@ -64,3 +64,18 @@ button {
   width: 60%;
   margin: 0 auto;
 }
+
+input + span {
+  position: relative;
+}
+
+input:required + span::after {
+  font-size: 0.7em;
+  position: absolute;
+  content: "required";
+  color: white;
+  background-color: black;
+  padding: 0.25rem 0.6rem;
+  right: 0.5rem;
+  top: -1.7rem;
+}
