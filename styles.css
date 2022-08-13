@@ -77,5 +77,27 @@ input:required + span::after {
   background-color: black;
   padding: 0.25rem 0.6rem;
   right: 0.5rem;
-  top: -1.7rem;
+  top: -1.8rem;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input + span::before {
+  position: absolute;
+  left: 0.4rem;
+  top: 0.3rem;
+}
+
+input:invalid + span::before {
+  position: absolute;
+  content: "✖";
+  color: red;
+}
+
+input:valid + span::before {
+  position: absolute;
+  content: "✓";
+  color: green;
 }
