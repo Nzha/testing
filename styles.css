@@ -5,7 +5,7 @@
 body {
   background-color: #fff;
   color: #333;
-  font: 1em Helvetica Neue, Helvetica, Arial, sans-serif;
+  font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
   padding: 1em;
   margin: 0;
 }
@@ -20,34 +20,47 @@ select {
   font-family: inherit;
   font-size: 100%;
   padding: 0; margin: 0;
-  appearance: none;
 }
 
-li {
+fieldset {
+  padding: 10px 30px 0;
+  width: 400px;
+}
+
+legend {
+  color: white;
+  background: black;
+  padding: 5px 10px;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
   display: flex;
-  gap: 0.5rem;
+  flex-flow: row wrap;
 }
 
-input[type="radio"] {
-  position: relative;
-  width: 18px;
-  height: 18px;
-  border: 1px solid darkgrey;
-  border-radius: 50%;
+button, label, input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
 }
 
-input[type="radio"]::before {
-  /* display: block; */
-  content: " ";
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  /* font-size: 1.2em; */
+input {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
 }
 
-input[type="radio"]:checked::before {
-  position: absolute;
-  background-color: red;
-  left: 1.2px;
-  top: 1.5px;
+input:hover, input:focus {
+  background-color: #eee;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
 }
