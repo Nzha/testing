@@ -2,102 +2,201 @@
   border: 1px solid red;
 } */
 
-body {
-  background-color: #fff;
-  color: #333;
-  font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
-  padding: 1em;
-  margin: 0;
-}
-
 * {
-  box-sizing: border-box;
-}
-
-button,
-input,
-select {
-  font-family: inherit;
-  font-size: 100%;
-  padding: 0; margin: 0;
-}
-
-fieldset {
-  padding: 10px 30px 0;
-  width: 400px;
-}
-
-legend {
-  color: white;
-  background: black;
-  padding: 5px 10px;
-}
-
-fieldset > div {
-  margin-bottom: 20px;
-  display: flex;
-  flex-flow: row wrap;
-}
-
-button, label, input {
-  display: block;
-  font-family: inherit;
-  font-size: 100%;
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  color: #5D6063;
+  background-color: #EAEDF0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.speaker-form-header {
+  text-align: center;
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  
+  width: 80%;
+  margin: 40px 0;
+  padding: 50px;
+}
+
+.speaker-form-header h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.speaker-form {
+  background-color: #F6F7F8;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  
+  width: 80%;
+  padding: 50px;
+  margin: 0 0 40px 0;
+}
+
+.form-row {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form-row input[type='text'],
+.form-row input[type='email'] {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+}
+
+.form-row input[type='text']:invalid,
+.form-row input[type='email']:invalid {
+  border: 1px solid #D55C5F;
+  color: #D55C5F;
+  box-shadow: none; /* Remove default red glow in Firefox */
+}
+
+.form-row label {
+  margin-bottom: 15px;
+}
+
+.legacy-form-row {
+  border: none;
+  margin-bottom: 40px;
+}
+
+.legacy-form-row legend {
+  margin-bottom: 15px;
+}
+
+.legacy-form-row .radio-label {
+  display: block;
+  font-size: 14px;
+  padding: 0 20px 0 10px;
+}
+
+.legacy-form-row input[type='radio'] {
+  margin-top: 2px;
+}
+  
+.legacy-form-row .radio-label,
+.legacy-form-row input[type='radio'] {
+  float: left;
+}
+
+.form-row select {
   width: 100%;
   padding: 5px;
-  height: 30px;
+  font-size: 14px;            /* This won't work in Chrome or Safari */
+  -webkit-appearance: none;   /* This will make it work */
 }
 
-input {
-  box-shadow: inset 1px 1px 3px #ccc;
-  border-radius: 5px;
+.form-row textarea {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+
+  min-height: 200px;
+  margin-bottom: 10px;
+  padding: 7px;
+  resize: none;
 }
 
-input:hover, input:focus {
-  background-color: #eee;
+.form-row .instructions {
+  color: #999999;
+  font-size: 14px;
+  margin-bottom: 30px;
 }
 
-button {
-  width: 60%;
-  margin: 0 auto;
+.form-row .checkbox-label {
+  margin-bottom: 0;
 }
 
-input + span {
-  position: relative;
+.form-row button {
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #FFFFFF;
+  background-color: #5995DA;
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 10px 40px;
+  cursor: pointer;
 }
 
-input:required + span::after {
-  font-size: 0.7em;
-  position: absolute;
-  content: "required";
-  color: white;
-  background-color: black;
-  padding: 0.25rem 0.6rem;
-  right: 0.5rem;
-  top: -1.8rem;
+.form-row button:hover {
+  background-color: #76AEED;
 }
 
-input:invalid {
-  border: 2px solid red;
+.form-row button:active {
+  background-color: #407FC7;
 }
 
-input + span::before {
-  position: absolute;
-  left: 0.4rem;
-  top: 0.3rem;
+@media only screen and (min-width: 700px) {
+  .speaker-form-header,
+  .speaker-form {
+    width: 600px;
+  }
+  .form-row {
+    flex-direction: row;
+    align-items: flex-start; /* To avoid stretching */
+    margin-bottom: 20px;
+  }
+  .form-row input[type='text'],
+  .form-row input[type='email'],
+  .form-row select, 
+  .form-row textarea {
+    width: 250px;
+    height: initial;
+  }
+  .form-row label {
+    text-align: right;
+    width: 120px;
+    margin-top: 7px;
+    padding-right: 20px;
+  }
 }
 
-input:invalid + span::before {
-  position: absolute;
-  content: "✖";
-  color: red;
+.legacy-form-row {
+  margin-bottom: 10px;
+}
+.legacy-form-row legend {
+  width: 120px;
+  text-align: right;
+  padding-right: 20px;
+}
+.legacy-form-row legend {
+  float: left;
 }
 
-input:valid + span::before {
-  position: absolute;
-  content: "✓";
-  color: green;
+.form-row .instructions {
+  margin-left: 120px;
+}
+
+.form-row .checkbox-label {
+  margin-left: 120px;
+  width: auto;
+}
+
+.form-row button {
+  margin-left: 120px;
 }
