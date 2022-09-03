@@ -2,17 +2,3 @@
   border: 1px solid red;
 } */
 
-.container {
-  padding: 2rem;
-}
-
-.cell {
-  background-color: #BDDAB3;
-  padding: 1rem;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-}
