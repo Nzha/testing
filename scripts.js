@@ -1,9 +1,9 @@
 let a = 17;
 
 const func = x => {
-  let a = x;
+  a = x;
 };
 
 func(99);
 
-console.log(a); // ???????
+console.log(a);
