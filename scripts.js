@@ -1,9 +1,13 @@
-let a = 17;
+const people = (function() {
 
-const func = x => {
-  a = x;
-};
+  let name = 'Will';
 
-func(99);
+  function sayName() {
+    alert(name);
+  }
+  
+  return {
+    sayName
+  }
 
-console.log(a);
+})()
