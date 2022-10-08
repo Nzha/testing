@@ -43,11 +43,11 @@ function Clock({ template }) {
 class Clock2 {
   timer = '';
 
-  constructor(template) {
+  constructor({template}) {
     this.template = template;
   }
 
-  render() {
+  render = () => {
     let date = new Date();
 
     let hours = date.getHours();
@@ -59,7 +59,7 @@ class Clock2 {
     let secs = date.getSeconds();
     if (secs < 10) secs = '0' + secs;
 
-    let output = template
+    let output = this.template
       .replace('h', hours)
       .replace('m', mins)
       .replace('s', secs);
@@ -67,16 +67,16 @@ class Clock2 {
     console.log(output);
   }
 
-  stop() {
-    clearInterval(timer);
+  stop = () => {
+    clearInterval(this.timer);
   }
 
-  start() {
-    render();
-    timer = setInterval(render, 1000);
+  start = () => {
+    this.render();
+    this.timer = setInterval(this.render, 1000);
   }
 
 }
 
-let clock = new Clock({template: 'h:m:s'});
+let clock = new Clock2({template: 'h:m:s'});
 clock.start();
