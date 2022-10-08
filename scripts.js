@@ -1,17 +1,37 @@
-function User(name, birthday) {
-  this.name = name;
-  this.birthday = birthday;
+function Clock({ template }) {
+  
+  let timer;
 
-  // age is calculated from the current date and birthday
-  Object.defineProperty(this, "age", {
-    get() {
-      let todayYear = new Date().getFullYear();
-      return todayYear - this.birthday.getFullYear();
-    }
-  });
+  function render() {
+    let date = new Date();
+
+    let hours = date.getHours();
+    if (hours < 10) hours = '0' + hours;
+
+    let mins = date.getMinutes();
+    if (mins < 10) mins = '0' + mins;
+
+    let secs = date.getSeconds();
+    if (secs < 10) secs = '0' + secs;
+
+    let output = template
+      .replace('h', hours)
+      .replace('m', mins)
+      .replace('s', secs);
+
+    console.log(output);
+  }
+
+  this.stop = function() {
+    clearInterval(timer);
+  };
+
+  this.start = function() {
+    render();
+    timer = setInterval(render, 1000);
+  };
+
 }
 
-let john = new User("John", new Date(1992, 6, 1));
-
-alert( john.birthday ); // birthday is available
-alert( john.age );      // ...as well as the age
+let clock = new Clock({template: 'h:m:s'});
+clock.start();
