@@ -13,7 +13,7 @@ class Person {
     this.firstName = firstName;
   }
 
-  setFirstName(lastName) {
+  setLastName(lastName) {
     this.lastName = lastName;
   }
 }
