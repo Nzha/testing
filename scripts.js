@@ -25,3 +25,15 @@ class Person {
     this.lastName = lastName;
   }
 }
+
+class Worker extends Person {
+  constructor(firstName, lastName, job) {
+    super(firstName, lastName);
+    this.job = job;
+    this.hasJob = true;
+  }
+
+  setJob(job) {
+    this.job = job;
+  }
+}
