@@ -1,17 +1,19 @@
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.hasJob = false;
-
-  this.fullName = function() {
-    return this.firstName + ' ' + this.lastName;
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.hasJob = false;
   }
 
-  this.setFirstName = function(firstName) {
+  fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  setFirstName(firstName) {
     this.firstName = firstName;
   }
 
-  this.setLastName = function(lastName) {
+  setFirstName(lastName) {
     this.lastName = lastName;
   }
 }
