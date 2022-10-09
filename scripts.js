@@ -1,10 +1,10 @@
 class Person {
-  static species() {
+  static get species() {
     return 'Homo sapiens';
   }
 
   static speciesSentence() {
-    return `Humans are classified as ${this.species()}`;
+    return `Humans are classified as ${this.species}`;
   }
 
   constructor(firstName, lastName) {
@@ -23,6 +23,12 @@ class Person {
 
   setLastName(lastName) {
     this.lastName = lastName;
+  }
+
+  set setFullName(name) {
+    name = name.split(' ');
+    this.setFirstName(name[0]);
+    this.setLastName(name[1]);
   }
 }
 
