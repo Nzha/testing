@@ -36,4 +36,9 @@ class Worker extends Person {
   setJob(job) {
     this.job = job;
   }
+
+  get biography() {
+    const bio = `${this.fullName()} is a ${this.job}`.toUpperCase;
+    return bio;
+  }
 }
