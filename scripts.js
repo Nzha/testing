@@ -32,19 +32,19 @@ class Person {
   }
 }
 
-// class Worker extends Person {
-//   constructor(firstName, lastName, job) {
-//     super(firstName, lastName);
-//     this.job = job;
-//     this.hasJob = true;
-//   }
+class Worker extends Person {
+  constructor(firstName, lastName, job) {
+    super(firstName, lastName);
+    this.job = job;
+    this.hasJob = true;
+  }
 
-//   setJob(job) {
-//     this.job = job;
-//   }
+  setJob(job) {
+    this.job = job;
+  }
 
-//   get biography() {
-//     const bio = `${this.fullName()} is a ${this.job}`.toUpperCase;
-//     return bio;
-//   }
-// }
+  get biography() {
+    const bio = `${this.fullName()} is a ${this.job}`.toUpperCase;
+    return bio;
+  }
+}
