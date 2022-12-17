@@ -531,6 +531,13 @@ dropdownBtn.addEventListener("click", function(e) {
     toggleDropdown();
 });
 
+// Close dropdown when a DOM element is clicked
+document.documentElement.addEventListener("click", function () {
+    if (dropdownMenu.classList.contains("show")) {
+      toggleDropdown();
+    }
+});
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (toggleDropdown);
 
 /***/ })
