@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* * {\n  border: 1px solid red;\n} */\n\nhtml {\n    box-sizing: border-box;\n}\n*, *:before, *:after {\n    box-sizing: inherit;\n}\n", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;;GAEG;;AAEH;IACI,sBAAsB;AAC1B;AACA;IACI,mBAAmB;AACvB","sourcesContent":["/* * {\n  border: 1px solid red;\n} */\n\nhtml {\n    box-sizing: border-box;\n}\n*, *:before, *:after {\n    box-sizing: inherit;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* * {\n  border: 1px solid red;\n} */\n\n:root {\n\tmargin: 0;\n\tpadding: 0;\n\tfont-family: 'Roboto', sans-serif;\n\t--shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,\n\trgba(0, 0, 0, 0.1) 0px 0px 0px 1px;\n\t--color: #166e67;\n\t--gap: 0.5rem;\n\t--radius: 5px;\n}\n\nhtml {\n    box-sizing: border-box;\n}\n*, *:before, *:after {\n    box-sizing: inherit;\n}\n\nbody {\n\tmargin: 2rem;\n\tbackground-color: #b3e6f4;\n\tfont-size: 0.9rem;\n\tcolor: black;\n}\n\n.btn {\n\tbackground-color: white;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\tcolumn-gap: var(--gap);\n\tpadding: 0.6rem;\n\tcursor: pointer;\n\tborder-radius: var(--radius);\n\tborder: none;\n\tbox-shadow: var(--shadow);\n\tposition: relative;\n}\n  \n.bx {\n\tfont-size: 1.1rem;\n}\n  \n.dropdown {\n\tposition: absolute;\n\twidth: 250px;\n\tbox-shadow: var(--shadow);\n\tborder-radius: var(--radius);\n\tmargin-top: 0.3rem;\n\tbackground: white;\n\ttransition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);\n\ttransform: translateY(0.5rem);\n\tvisibility: hidden;\n\topacity: 0;\n}\n  \n.dropdown a {\n\tdisplay: flex;\n\talign-items: center;\n\tcolumn-gap: var(--gap);\n\tpadding: 0.8rem 1rem;\n\ttext-decoration: none;\n\tcolor: black;\n}\n  \n.dropdown a:hover {\n\tbackground-color: var(--color);\n\tcolor: white;\n}\n\n.show {\n\ttransform: translateY(0rem);\n\tvisibility: visible;\n\topacity: 1;\n}\n  \n.arrow {\n\ttransform: rotate(180deg);\n\ttransition: 0.2s ease;\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;;GAEG;;AAEH;CACC,SAAS;CACT,UAAU;CACV,iCAAiC;CACjC;mCACkC;CAClC,gBAAgB;CAChB,aAAa;CACb,aAAa;AACd;;AAEA;IACI,sBAAsB;AAC1B;AACA;IACI,mBAAmB;AACvB;;AAEA;CACC,YAAY;CACZ,yBAAyB;CACzB,iBAAiB;CACjB,YAAY;AACb;;AAEA;CACC,uBAAuB;CACvB,aAAa;CACb,mBAAmB;CACnB,2BAA2B;CAC3B,sBAAsB;CACtB,eAAe;CACf,eAAe;CACf,4BAA4B;CAC5B,YAAY;CACZ,yBAAyB;CACzB,kBAAkB;AACnB;;AAEA;CACC,iBAAiB;AAClB;;AAEA;CACC,kBAAkB;CAClB,YAAY;CACZ,yBAAyB;CACzB,4BAA4B;CAC5B,kBAAkB;CAClB,iBAAiB;CACjB,kDAAkD;CAClD,6BAA6B;CAC7B,kBAAkB;CAClB,UAAU;AACX;;AAEA;CACC,aAAa;CACb,mBAAmB;CACnB,sBAAsB;CACtB,oBAAoB;CACpB,qBAAqB;CACrB,YAAY;AACb;;AAEA;CACC,8BAA8B;CAC9B,YAAY;AACb;;AAEA;CACC,2BAA2B;CAC3B,mBAAmB;CACnB,UAAU;AACX;;AAEA;CACC,yBAAyB;CACzB,qBAAqB;AACtB","sourcesContent":["/* * {\n  border: 1px solid red;\n} */\n\n:root {\n\tmargin: 0;\n\tpadding: 0;\n\tfont-family: 'Roboto', sans-serif;\n\t--shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,\n\trgba(0, 0, 0, 0.1) 0px 0px 0px 1px;\n\t--color: #166e67;\n\t--gap: 0.5rem;\n\t--radius: 5px;\n}\n\nhtml {\n    box-sizing: border-box;\n}\n*, *:before, *:after {\n    box-sizing: inherit;\n}\n\nbody {\n\tmargin: 2rem;\n\tbackground-color: #b3e6f4;\n\tfont-size: 0.9rem;\n\tcolor: black;\n}\n\n.btn {\n\tbackground-color: white;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\tcolumn-gap: var(--gap);\n\tpadding: 0.6rem;\n\tcursor: pointer;\n\tborder-radius: var(--radius);\n\tborder: none;\n\tbox-shadow: var(--shadow);\n\tposition: relative;\n}\n  \n.bx {\n\tfont-size: 1.1rem;\n}\n  \n.dropdown {\n\tposition: absolute;\n\twidth: 250px;\n\tbox-shadow: var(--shadow);\n\tborder-radius: var(--radius);\n\tmargin-top: 0.3rem;\n\tbackground: white;\n\ttransition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);\n\ttransform: translateY(0.5rem);\n\tvisibility: hidden;\n\topacity: 0;\n}\n  \n.dropdown a {\n\tdisplay: flex;\n\talign-items: center;\n\tcolumn-gap: var(--gap);\n\tpadding: 0.8rem 1rem;\n\ttext-decoration: none;\n\tcolor: black;\n}\n  \n.dropdown a:hover {\n\tbackground-color: var(--color);\n\tcolor: white;\n}\n\n.show {\n\ttransform: translateY(0rem);\n\tvisibility: visible;\n\topacity: 1;\n}\n  \n.arrow {\n\ttransform: rotate(180deg);\n\ttransition: 0.2s ease;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -505,6 +505,34 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/dropdown.js":
+/*!*************************!*\
+  !*** ./src/dropdown.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const dropdownBtn = document.getElementById("btn");
+const dropdownMenu = document.getElementById("dropdown");
+const toggleArrow = document.getElementById("arrow");
+
+const toggleDropdown = function toddleDropdownMenu() {
+    dropdownMenu.classList.toggle("show");
+    toggleArrow.classList.toggle("arrow");
+};
+
+dropdownBtn.addEventListener("click", function(e) {
+    e.stopPropagation();
+    toggleDropdown();
+});
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (toggleDropdown);
+
 /***/ })
 
 /******/ 	});
@@ -588,9 +616,11 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dropdown */ "./src/dropdown.js");
 
 
 
+(0,_dropdown__WEBPACK_IMPORTED_MODULE_1__["default"])();
 })();
 
 /******/ })()
