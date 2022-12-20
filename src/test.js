@@ -1,14 +1,18 @@
-function addNumbers(x,y) {
-	// ensure numerical input
-	x = Number( x );
-	y = Number( y );
+var p = Promise.resolve( 21 );
 
-	// + will safely do numeric addition
-	return x + y;
-}
+p.then( function(v){
+	console.log( v );	// 21
 
-addNumbers( 21, 21 );	// 42
-addNumbers( 21, "21" );	// 42
-
-
-export default addNumbers;
+	// create a promise to return
+	return new Promise( function(resolve,reject){
+		// introduce asynchrony!
+		setTimeout( function(){
+			// fulfill with value `42`
+			resolve( v * 2 );
+		}, 100 );
+	} );
+} )
+.then( function(v){
+	// runs after the 100ms delay in the previous step
+	console.log( v );	// 42
+} );
