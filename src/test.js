@@ -1,22 +1,14 @@
-let promise = new Promise(function(resolve, reject) {
-	
-	// Do an async task async task and then...
+function addNumbers(x,y) {
+	// ensure numerical input
+	x = Number( x );
+	y = Number( y );
 
-	if(/* good condition */) {
-		resolve('Success!');
-	}
-	else {
-		reject('Failure!');
-	}
-});
+	// + will safely do numeric addition
+	return x + y;
+}
 
-p.then(function(result) { 
-	/* do something with the result */
-}).catch(function() {
-	/* error :( */
-}).finally(function() {
-   /* executes regardless or success for failure */ 
-});
+addNumbers( 21, 21 );	// 42
+addNumbers( 21, "21" );	// 42
 
 
-export let promise;
+export default addNumbers;
