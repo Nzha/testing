@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
@@ -8,6 +7,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -34,6 +34,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, "/* * {\n  border: 1px solid red;\n} */
   \*****************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /*
@@ -128,6 +129,7 @@ module.exports = function (cssWithMappingToString) {
   \************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 module.exports = function (item) {
@@ -153,6 +155,7 @@ module.exports = function (item) {
   \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -207,6 +210,7 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
   \****************************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var stylesInDOM = [];
@@ -320,6 +324,7 @@ module.exports = function (list, options) {
   \********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 var memo = {};
@@ -368,6 +373,7 @@ module.exports = insertBySelector;
   \**********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -388,6 +394,7 @@ module.exports = insertStyleElement;
   \**********************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -409,6 +416,7 @@ module.exports = setAttributesWithoutAttributes;
   \***************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -488,6 +496,7 @@ module.exports = domAPI;
   \*********************************************************************/
 /***/ ((module) => {
 
+"use strict";
 
 
 /* istanbul ignore next  */
@@ -504,6 +513,26 @@ function styleTagTransform(css, styleElement) {
 }
 
 module.exports = styleTagTransform;
+
+/***/ }),
+
+/***/ "./src/fetch.js":
+/*!**********************!*\
+  !*** ./src/fetch.js ***!
+  \**********************/
+/***/ (() => {
+
+const img = document.querySelector('img');
+
+fetch('https://api.giphy.com/v1/gifs/translate?api_key=gZxdUZFUhTpm3p6shvn9AWl5ysMTnA1N&s=cats', {
+    mode: 'cors'
+}).then((response) => {
+    return response.json();
+}).then((response) => {
+    img.src = response.data.images.original.url;
+}).catch((error) => {
+    console.log(error);
+});
 
 /***/ })
 
@@ -581,30 +610,18 @@ module.exports = styleTagTransform;
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
+/* harmony import */ var _fetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fetch */ "./src/fetch.js");
+/* harmony import */ var _fetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fetch__WEBPACK_IMPORTED_MODULE_1__);
 
 // import toggleDropdown from './dropdown';
-// import fetch from './test';
-
-
-const img = document.querySelector('img');
-
-fetch('https://api.giphy.com/v1/gifs/translate?api_key=gZxdUZFUhTpm3p6shvn9AWl5ysMTnA1N&s=cats', {
-    mode: 'cors'
-}).then((response) => {
-    return response.json();
-}).then((response) => {
-    img.src = response.data.images.original.url;
-}).catch((error) => {
-    console.log(error);
-});
-
 
 
 
