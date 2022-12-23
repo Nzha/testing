@@ -505,68 +505,6 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
-/***/ }),
-
-/***/ "./src/dropdown.js":
-/*!*************************!*\
-  !*** ./src/dropdown.js ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-const dropdownBtn = document.getElementById("btn");
-const dropdownMenu = document.getElementById("dropdown");
-const toggleArrow = document.getElementById("arrow");
-
-const toggleDropdown = function toddleDropdownMenu() {
-    dropdownMenu.classList.toggle("show");
-    toggleArrow.classList.toggle("arrow");
-};
-
-dropdownBtn.addEventListener("click", function(e) {
-    e.stopPropagation();
-    toggleDropdown();
-});
-
-// Close dropdown when a DOM element is clicked
-document.documentElement.addEventListener("click", function () {
-    if (dropdownMenu.classList.contains("show")) {
-      toggleDropdown();
-    }
-});
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (toggleDropdown);
-
-/***/ }),
-
-/***/ "./src/test.js":
-/*!*********************!*\
-  !*** ./src/test.js ***!
-  \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-function addNumbers(x,y) {
-	// ensure numerical input
-	x = Number( x );
-	y = Number( y );
-
-	// + will safely do numeric addition
-	return x + y;
-}
-
-addNumbers( 21, 21 );	// 42
-addNumbers( 21, "21" );	// 42
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addNumbers);
-
 /***/ })
 
 /******/ 	});
@@ -650,9 +588,22 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
-/* harmony import */ var _dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./dropdown */ "./src/dropdown.js");
-/* harmony import */ var _test__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./test */ "./src/test.js");
 
+// import toggleDropdown from './dropdown';
+// import fetch from './test';
+
+
+const img = document.querySelector('img');
+
+fetch('https://api.giphy.com/v1/gifs/translate?api_key=gZxdUZFUhTpm3p6shvn9AWl5ysMTnA1N&s=cats', {
+    mode: 'cors'
+})
+	.then(function(response) {
+		return response.json();
+	})
+    .then(function(response) {
+        img.src = response.data.images.original.url;
+    });
 
 
 
