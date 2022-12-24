@@ -7,7 +7,7 @@ const getImg = function getImgfromGiphyAPI(search) {
 
     search = userSearch ? userSearch : 'cats';
 
-    fetch(`https://api.giphy.com/v1/gifs/translate?api_key=gZxdUZFUhTpm3p6shvn9AWl5ysMTnA1N&s=${search}`, {mode: 'cors'})
+    fetch(`https://api.giphy.com/v1/gifs/translate?api_key=MYKEYHERE&s=${search}`, {mode: 'cors'})
         .then((response) => response.json())
         .then((response) => img.src = response.data.images.original.url)
         .catch((error) => console.log(error));
