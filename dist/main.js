@@ -526,15 +526,27 @@ const img = document.querySelector('img');
 const searchBtn = document.querySelector('.search-btn');
 const refreshBtn = document.querySelector('.refresh-btn');
 
-const getImg = function getImgfromGiphyAPI(search) {
-    let userSearch = document.querySelector('#user-search').value;
+// // USING PROMISES DIRECTLY
+// const getImg = function getImgfromGiphyAPI(search) {
+//     let userSearch = document.querySelector('#user-search').value;
 
+//     search = userSearch ? userSearch : 'cats';
+
+//     fetch(`https://api.giphy.com/v1/gifs/translate?api_key=MYKEYHERE&s=${search}`, {mode: 'cors'})
+//         .then((response) => response.json())
+//         .then((response) => img.src = response.data.images.original.url)
+//         .catch((error) => console.log(error));
+// }
+
+
+// USING PROMISES VIA ASYNC/AWAIT
+const getImg = async function getImgfromGiphyAPI(search) {
+    let userSearch = document.querySelector('#user-search').value;
     search = userSearch ? userSearch : 'cats';
 
-    fetch(`https://api.giphy.com/v1/gifs/translate?api_key=gZxdUZFUhTpm3p6shvn9AWl5ysMTnA1N&s=${search}`, {mode: 'cors'})
-        .then((response) => response.json())
-        .then((response) => img.src = response.data.images.original.url)
-        .catch((error) => console.log(error));
+    const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=gSwGOyzsRFnpkZDzVzWo8PbsOIMKdBSd&s=${search}`, {mode: 'cors'});
+    const gifData = await response.json();
+    img.src = gifData.data.images.original.url
 }
 
 getImg();
@@ -632,7 +644,11 @@ __webpack_require__.r(__webpack_exports__);
 // import toggleDropdown from './dropdown';
 
 
-
+async function getPersonsInfo(name) {
+    const people = await server.getPeople();
+    const person = people.find(person => { return person.name === name });
+    return person;
+}
 })();
 
 /******/ })()
