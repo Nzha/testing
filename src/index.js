@@ -2,8 +2,13 @@ import './style.css';
 // import toggleDropdown from './dropdown';
 import fetch from './fetch';
 
-async function getPersonsInfo(name) {
-    const people = await server.getPeople();
-    const person = people.find(person => { return person.name === name });
-    return person;
+const loadJson = async function loadJsonFromUrl(url) {
+    const response = await fetch(url);
+    const responseData = await function() {
+        try {
+            return response.json();
+        } catch(err) {
+            alert(err);
+        }
+    }
 }

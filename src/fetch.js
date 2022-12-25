@@ -19,10 +19,13 @@ const refreshBtn = document.querySelector('.refresh-btn');
 const getImg = async function getImgfromGiphyAPI(search) {
     let userSearch = document.querySelector('#user-search').value;
     search = userSearch ? userSearch : 'cats';
-
-    const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=gSwGOyzsRFnpkZDzVzWo8PbsOIMKdBSd&s=${search}`, {mode: 'cors'});
-    const gifData = await response.json();
-    img.src = gifData.data.images.original.url
+    try {
+        const response = await fetch(`https://api.giphy.com/v1/gifs/translate?api_key=gSwGOyzsRFnpkZDzVzWo8PbsOIMKdBSd&s=${search}`, {mode: 'cors'});
+        const gifData = await response.json();
+        img.src = gifData.data.images.original.url
+    } catch(error) {
+        console.log(error);
+    }
 }
 
 getImg();
