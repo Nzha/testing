@@ -28,6 +28,14 @@ const getImg = async function getImgfromGiphyAPI(search) {
     }
 }
 
+function handleError(fn) {
+    return function (...params) {
+        return fn(...params).catch(function (err) {
+            console.log('oops', err)
+        });
+    }
+}
+
 getImg();
 
 searchBtn.addEventListener('click', getImg);
