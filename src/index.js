@@ -1,6 +1,6 @@
-import "./style.css";
+import './style.css';
 
-const name = "James";
+const name = 'James';
 
 const person = { first: name };
 
@@ -10,4 +10,6 @@ const sayHelloLinting = (fName) => {
   console.log(`Hello linting, ${fName}`);
 };
 
-sayHelloLinting("Adrien");
+sayHelloLinting('Adrien');
+
+const test = 'haha';
