@@ -606,12 +606,18 @@ function sumTo2(n) {
 }
 
 function sumTo3(n) {
-  return n*(n+1)/2;
+  return (n * (n + 1)) / 2;
 }
 
-console.log(sumTo1(100));
-console.log(sumTo2(100));
-console.log(sumTo3(100));
+// console.log(sumTo1(100));
+// console.log(sumTo2(100));
+// console.log(sumTo3(100));
+
+function factorial(n) {
+  return n !== 1 ? n * factorial(n - 1) : n;
+}
+
+console.log(factorial(5));
 
 })();
 
