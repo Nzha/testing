@@ -609,15 +609,19 @@ function sumTo3(n) {
   return (n * (n + 1)) / 2;
 }
 
-// console.log(sumTo1(100));
-// console.log(sumTo2(100));
-// console.log(sumTo3(100));
-
 function factorial(n) {
   return n !== 1 ? n * factorial(n - 1) : n;
 }
 
-console.log(factorial(5));
+function fib(n) {
+  return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+}
+
+// console.log(sumTo1(100));
+// console.log(sumTo2(100));
+// console.log(sumTo3(100));
+// console.log(factorial(5));
+console.log(fib(7));
 
 })();
 
