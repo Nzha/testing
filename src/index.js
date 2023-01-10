@@ -1,13 +1,24 @@
 import './style.css';
 
-const name = 'James';
+function sumTo1(n) {
+  let result = 0;
+  for (let i = 1; i <= n; i++) {
+    result += i;
+  }
+  return result;
+}
 
-const person = { first: name };
+function sumTo2(n) {
+  if (n === 1) {
+    return n;
+  }
+  return n + sumTo2(n - 1);
+}
 
-console.log(person);
+function sumTo3(n) {
+  return n*(n+1)/2;
+}
 
-const sayHelloLinting = (fName) => {
-  console.log(`Hello linting, ${fName}`);
-};
-
-sayHelloLinting('Adrien');
+console.log(sumTo1(100));
+console.log(sumTo2(100));
+console.log(sumTo3(100));
