@@ -1,12 +1,12 @@
 /******/ (() => {
   // webpackBootstrap
+  /******/ 'use strict';
   /******/ var __webpack_modules__ = {
-    /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
+    /***/ './node_modules/css-loader/dist/cjs.js!./src/style.css':
       /*!*************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
   \*************************************************************/
       /***/ (module, __webpack_exports__, __webpack_require__) => {
-        "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
           /* harmony export */ default: () => __WEBPACK_DEFAULT_EXPORT__,
@@ -14,7 +14,7 @@
         });
         /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(
-            /*! ../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js"
+            /*! ../node_modules/css-loader/dist/runtime/sourceMaps.js */ './node_modules/css-loader/dist/runtime/sourceMaps.js'
           );
         /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default =
           /*#__PURE__*/ __webpack_require__.n(
@@ -22,7 +22,7 @@
           );
         /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ =
           __webpack_require__(
-            /*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js"
+            /*! ../node_modules/css-loader/dist/runtime/api.js */ './node_modules/css-loader/dist/runtime/api.js'
           );
         /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default =
           /*#__PURE__*/ __webpack_require__.n(
@@ -37,18 +37,18 @@
         // Module
         ___CSS_LOADER_EXPORT___.push([
           module.id,
-          "/* * {\n  border: 1px solid red;\n} */\n\n:root {\n\tmargin: 0;\n\tpadding: 0;\n\tfont-family: 'Roboto', sans-serif;\n\t--shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,\n\trgba(0, 0, 0, 0.1) 0px 0px 0px 1px;\n\t--color: #166e67;\n\t--gap: 0.5rem;\n\t--radius: 5px;\n}\n\nhtml {\n    box-sizing: border-box;\n}\n*, *:before, *:after {\n    box-sizing: inherit;\n}\n\nbody {\n\tbackground-color: #b3e6f4;\n\tfont-size: 0.9rem;\n\tcolor: black;\n}\n\n.content {\n\theight: 100vh;\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tjustify-content: center;\n\tgap: 2rem;\n}\n\n.refresh-btn {\n\tbackground-color: white;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\tcolumn-gap: var(--gap);\n\tpadding: 0.6rem;\n\tcursor: pointer;\n\tborder-radius: var(--radius);\n\tborder: none;\n\tbox-shadow: var(--shadow);\n}\n\n/* DROPDOWN MENU STARTS */\n.btn {\n\tbackground-color: white;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\tcolumn-gap: var(--gap);\n\tpadding: 0.6rem;\n\tcursor: pointer;\n\tborder-radius: var(--radius);\n\tborder: none;\n\tbox-shadow: var(--shadow);\n\tposition: relative;\n}\n  \n.bx {\n\tfont-size: 1.1rem;\n}\n  \n.dropdown {\n\tposition: absolute;\n\twidth: 250px;\n\tbox-shadow: var(--shadow);\n\tborder-radius: var(--radius);\n\tmargin-top: 0.3rem;\n\tbackground: white;\n\ttransition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);\n\ttransform: translateY(0.5rem);\n\tvisibility: hidden;\n\topacity: 0;\n}\n  \n.dropdown a {\n\tdisplay: flex;\n\talign-items: center;\n\tcolumn-gap: var(--gap);\n\tpadding: 0.8rem 1rem;\n\ttext-decoration: none;\n\tcolor: black;\n}\n  \n.dropdown a:hover {\n\tbackground-color: var(--color);\n\tcolor: white;\n}\n\n.show {\n\ttransform: translateY(0rem);\n\tvisibility: visible;\n\topacity: 1;\n}\n  \n.arrow {\n\ttransform: rotate(180deg);\n\ttransition: 0.2s ease;\n}\n/* DROPDOWN MENU ENDS */",
-          "",
+          '/* * {\n  border: 1px solid red;\n} */\n\n:root {\n  margin: 0;\n  padding: 0;\n  font-family: "Roboto", sans-serif;\n  --shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,\n    rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;\n  --color: #166e67;\n  --gap: 0.5rem;\n  --radius: 5px;\n}\n\nhtml {\n  box-sizing: border-box;\n}\n*,\n*:before,\n*:after {\n  box-sizing: inherit;\n}\n\nbody {\n  background-color: #b3e6f4;\n  font-size: 0.9rem;\n  color: black;\n}\n\n.content {\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 2rem;\n}\n\n.refresh-btn {\n  background-color: white;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  column-gap: var(--gap);\n  padding: 0.6rem;\n  cursor: pointer;\n  border-radius: var(--radius);\n  border: none;\n  box-shadow: var(--shadow);\n}\n\n/* DROPDOWN MENU STARTS */\n.btn {\n  background-color: white;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  column-gap: var(--gap);\n  padding: 0.6rem;\n  cursor: pointer;\n  border-radius: var(--radius);\n  border: none;\n  box-shadow: var(--shadow);\n  position: relative;\n}\n\n.bx {\n  font-size: 1.1rem;\n}\n\n.dropdown {\n  position: absolute;\n  width: 250px;\n  box-shadow: var(--shadow);\n  border-radius: var(--radius);\n  margin-top: 0.3rem;\n  background: white;\n  transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);\n  transform: translateY(0.5rem);\n  visibility: hidden;\n  opacity: 0;\n}\n\n.dropdown a {\n  display: flex;\n  align-items: center;\n  column-gap: var(--gap);\n  padding: 0.8rem 1rem;\n  text-decoration: none;\n  color: black;\n}\n\n.dropdown a:hover {\n  background-color: var(--color);\n  color: white;\n}\n\n.show {\n  transform: translateY(0rem);\n  visibility: visible;\n  opacity: 1;\n}\n\n.arrow {\n  transform: rotate(180deg);\n  transition: 0.2s ease;\n}\n/* DROPDOWN MENU ENDS */\n',
+          '',
           {
             version: 3,
-            sources: ["webpack://./src/style.css"],
+            sources: ['webpack://./src/style.css'],
             names: [],
             mappings:
-              "AAAA;;GAEG;;AAEH;CACC,SAAS;CACT,UAAU;CACV,iCAAiC;CACjC;mCACkC;CAClC,gBAAgB;CAChB,aAAa;CACb,aAAa;AACd;;AAEA;IACI,sBAAsB;AAC1B;AACA;IACI,mBAAmB;AACvB;;AAEA;CACC,yBAAyB;CACzB,iBAAiB;CACjB,YAAY;AACb;;AAEA;CACC,aAAa;CACb,aAAa;CACb,sBAAsB;CACtB,mBAAmB;CACnB,uBAAuB;CACvB,SAAS;AACV;;AAEA;CACC,uBAAuB;CACvB,aAAa;CACb,mBAAmB;CACnB,2BAA2B;CAC3B,sBAAsB;CACtB,eAAe;CACf,eAAe;CACf,4BAA4B;CAC5B,YAAY;CACZ,yBAAyB;AAC1B;;AAEA,yBAAyB;AACzB;CACC,uBAAuB;CACvB,aAAa;CACb,mBAAmB;CACnB,2BAA2B;CAC3B,sBAAsB;CACtB,eAAe;CACf,eAAe;CACf,4BAA4B;CAC5B,YAAY;CACZ,yBAAyB;CACzB,kBAAkB;AACnB;;AAEA;CACC,iBAAiB;AAClB;;AAEA;CACC,kBAAkB;CAClB,YAAY;CACZ,yBAAyB;CACzB,4BAA4B;CAC5B,kBAAkB;CAClB,iBAAiB;CACjB,kDAAkD;CAClD,6BAA6B;CAC7B,kBAAkB;CAClB,UAAU;AACX;;AAEA;CACC,aAAa;CACb,mBAAmB;CACnB,sBAAsB;CACtB,oBAAoB;CACpB,qBAAqB;CACrB,YAAY;AACb;;AAEA;CACC,8BAA8B;CAC9B,YAAY;AACb;;AAEA;CACC,2BAA2B;CAC3B,mBAAmB;CACnB,UAAU;AACX;;AAEA;CACC,yBAAyB;CACzB,qBAAqB;AACtB;AACA,uBAAuB",
+              'AAAA;;GAEG;;AAEH;EACE,SAAS;EACT,UAAU;EACV,iCAAiC;EACjC;sCACoC;EACpC,gBAAgB;EAChB,aAAa;EACb,aAAa;AACf;;AAEA;EACE,sBAAsB;AACxB;AACA;;;EAGE,mBAAmB;AACrB;;AAEA;EACE,yBAAyB;EACzB,iBAAiB;EACjB,YAAY;AACd;;AAEA;EACE,aAAa;EACb,aAAa;EACb,sBAAsB;EACtB,mBAAmB;EACnB,uBAAuB;EACvB,SAAS;AACX;;AAEA;EACE,uBAAuB;EACvB,aAAa;EACb,mBAAmB;EACnB,2BAA2B;EAC3B,sBAAsB;EACtB,eAAe;EACf,eAAe;EACf,4BAA4B;EAC5B,YAAY;EACZ,yBAAyB;AAC3B;;AAEA,yBAAyB;AACzB;EACE,uBAAuB;EACvB,aAAa;EACb,mBAAmB;EACnB,2BAA2B;EAC3B,sBAAsB;EACtB,eAAe;EACf,eAAe;EACf,4BAA4B;EAC5B,YAAY;EACZ,yBAAyB;EACzB,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,kBAAkB;EAClB,YAAY;EACZ,yBAAyB;EACzB,4BAA4B;EAC5B,kBAAkB;EAClB,iBAAiB;EACjB,kDAAkD;EAClD,6BAA6B;EAC7B,kBAAkB;EAClB,UAAU;AACZ;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,sBAAsB;EACtB,oBAAoB;EACpB,qBAAqB;EACrB,YAAY;AACd;;AAEA;EACE,8BAA8B;EAC9B,YAAY;AACd;;AAEA;EACE,2BAA2B;EAC3B,mBAAmB;EACnB,UAAU;AACZ;;AAEA;EACE,yBAAyB;EACzB,qBAAqB;AACvB;AACA,uBAAuB',
             sourcesContent: [
-              "/* * {\n  border: 1px solid red;\n} */\n\n:root {\n\tmargin: 0;\n\tpadding: 0;\n\tfont-family: 'Roboto', sans-serif;\n\t--shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,\n\trgba(0, 0, 0, 0.1) 0px 0px 0px 1px;\n\t--color: #166e67;\n\t--gap: 0.5rem;\n\t--radius: 5px;\n}\n\nhtml {\n    box-sizing: border-box;\n}\n*, *:before, *:after {\n    box-sizing: inherit;\n}\n\nbody {\n\tbackground-color: #b3e6f4;\n\tfont-size: 0.9rem;\n\tcolor: black;\n}\n\n.content {\n\theight: 100vh;\n\tdisplay: flex;\n\tflex-direction: column;\n\talign-items: center;\n\tjustify-content: center;\n\tgap: 2rem;\n}\n\n.refresh-btn {\n\tbackground-color: white;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\tcolumn-gap: var(--gap);\n\tpadding: 0.6rem;\n\tcursor: pointer;\n\tborder-radius: var(--radius);\n\tborder: none;\n\tbox-shadow: var(--shadow);\n}\n\n/* DROPDOWN MENU STARTS */\n.btn {\n\tbackground-color: white;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\tcolumn-gap: var(--gap);\n\tpadding: 0.6rem;\n\tcursor: pointer;\n\tborder-radius: var(--radius);\n\tborder: none;\n\tbox-shadow: var(--shadow);\n\tposition: relative;\n}\n  \n.bx {\n\tfont-size: 1.1rem;\n}\n  \n.dropdown {\n\tposition: absolute;\n\twidth: 250px;\n\tbox-shadow: var(--shadow);\n\tborder-radius: var(--radius);\n\tmargin-top: 0.3rem;\n\tbackground: white;\n\ttransition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);\n\ttransform: translateY(0.5rem);\n\tvisibility: hidden;\n\topacity: 0;\n}\n  \n.dropdown a {\n\tdisplay: flex;\n\talign-items: center;\n\tcolumn-gap: var(--gap);\n\tpadding: 0.8rem 1rem;\n\ttext-decoration: none;\n\tcolor: black;\n}\n  \n.dropdown a:hover {\n\tbackground-color: var(--color);\n\tcolor: white;\n}\n\n.show {\n\ttransform: translateY(0rem);\n\tvisibility: visible;\n\topacity: 1;\n}\n  \n.arrow {\n\ttransform: rotate(180deg);\n\ttransition: 0.2s ease;\n}\n/* DROPDOWN MENU ENDS */",
+              '/* * {\n  border: 1px solid red;\n} */\n\n:root {\n  margin: 0;\n  padding: 0;\n  font-family: "Roboto", sans-serif;\n  --shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,\n    rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;\n  --color: #166e67;\n  --gap: 0.5rem;\n  --radius: 5px;\n}\n\nhtml {\n  box-sizing: border-box;\n}\n*,\n*:before,\n*:after {\n  box-sizing: inherit;\n}\n\nbody {\n  background-color: #b3e6f4;\n  font-size: 0.9rem;\n  color: black;\n}\n\n.content {\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  gap: 2rem;\n}\n\n.refresh-btn {\n  background-color: white;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  column-gap: var(--gap);\n  padding: 0.6rem;\n  cursor: pointer;\n  border-radius: var(--radius);\n  border: none;\n  box-shadow: var(--shadow);\n}\n\n/* DROPDOWN MENU STARTS */\n.btn {\n  background-color: white;\n  display: flex;\n  align-items: center;\n  justify-content: flex-start;\n  column-gap: var(--gap);\n  padding: 0.6rem;\n  cursor: pointer;\n  border-radius: var(--radius);\n  border: none;\n  box-shadow: var(--shadow);\n  position: relative;\n}\n\n.bx {\n  font-size: 1.1rem;\n}\n\n.dropdown {\n  position: absolute;\n  width: 250px;\n  box-shadow: var(--shadow);\n  border-radius: var(--radius);\n  margin-top: 0.3rem;\n  background: white;\n  transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);\n  transform: translateY(0.5rem);\n  visibility: hidden;\n  opacity: 0;\n}\n\n.dropdown a {\n  display: flex;\n  align-items: center;\n  column-gap: var(--gap);\n  padding: 0.8rem 1rem;\n  text-decoration: none;\n  color: black;\n}\n\n.dropdown a:hover {\n  background-color: var(--color);\n  color: white;\n}\n\n.show {\n  transform: translateY(0rem);\n  visibility: visible;\n  opacity: 1;\n}\n\n.arrow {\n  transform: rotate(180deg);\n  transition: 0.2s ease;\n}\n/* DROPDOWN MENU ENDS */\n',
             ],
-            sourceRoot: "",
+            sourceRoot: '',
           },
         ]);
         // Exports
@@ -58,13 +58,11 @@
         /***/
       },
 
-    /***/ "./node_modules/css-loader/dist/runtime/api.js":
+    /***/ './node_modules/css-loader/dist/runtime/api.js':
       /*!*****************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/api.js ***!
   \*****************************************************/
       /***/ (module) => {
-        "use strict";
-
         /*
   MIT License http://www.opensource.org/licenses/mit-license.php
   Author Tobias Koppers @sokra
@@ -75,37 +73,37 @@
           // return the list of modules as css string
           list.toString = function toString() {
             return this.map(function (item) {
-              var content = "";
-              var needLayer = typeof item[5] !== "undefined";
+              var content = '';
+              var needLayer = typeof item[5] !== 'undefined';
               if (item[4]) {
-                content += "@supports (".concat(item[4], ") {");
+                content += '@supports ('.concat(item[4], ') {');
               }
               if (item[2]) {
-                content += "@media ".concat(item[2], " {");
+                content += '@media '.concat(item[2], ' {');
               }
               if (needLayer) {
-                content += "@layer".concat(
-                  item[5].length > 0 ? " ".concat(item[5]) : "",
-                  " {"
+                content += '@layer'.concat(
+                  item[5].length > 0 ? ' '.concat(item[5]) : '',
+                  ' {'
                 );
               }
               content += cssWithMappingToString(item);
               if (needLayer) {
-                content += "}";
+                content += '}';
               }
               if (item[2]) {
-                content += "}";
+                content += '}';
               }
               if (item[4]) {
-                content += "}";
+                content += '}';
               }
               return content;
-            }).join("");
+            }).join('');
           };
 
           // import a list of modules into the list
           list.i = function i(modules, media, dedupe, supports, layer) {
-            if (typeof modules === "string") {
+            if (typeof modules === 'string') {
               modules = [[null, modules, undefined]];
             }
             var alreadyImportedModules = {};
@@ -122,13 +120,13 @@
               if (dedupe && alreadyImportedModules[item[0]]) {
                 continue;
               }
-              if (typeof layer !== "undefined") {
-                if (typeof item[5] === "undefined") {
+              if (typeof layer !== 'undefined') {
+                if (typeof item[5] === 'undefined') {
                   item[5] = layer;
                 } else {
-                  item[1] = "@layer"
-                    .concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {")
-                    .concat(item[1], "}");
+                  item[1] = '@layer'
+                    .concat(item[5].length > 0 ? ' '.concat(item[5]) : '', ' {')
+                    .concat(item[1], '}');
                   item[5] = layer;
                 }
               }
@@ -136,19 +134,19 @@
                 if (!item[2]) {
                   item[2] = media;
                 } else {
-                  item[1] = "@media "
-                    .concat(item[2], " {")
-                    .concat(item[1], "}");
+                  item[1] = '@media '
+                    .concat(item[2], ' {')
+                    .concat(item[1], '}');
                   item[2] = media;
                 }
               }
               if (supports) {
                 if (!item[4]) {
-                  item[4] = "".concat(supports);
+                  item[4] = ''.concat(supports);
                 } else {
-                  item[1] = "@supports ("
-                    .concat(item[4], ") {")
-                    .concat(item[1], "}");
+                  item[1] = '@supports ('
+                    .concat(item[4], ') {')
+                    .concat(item[1], '}');
                   item[4] = supports;
                 }
               }
@@ -161,37 +159,35 @@
         /***/
       },
 
-    /***/ "./node_modules/css-loader/dist/runtime/sourceMaps.js":
+    /***/ './node_modules/css-loader/dist/runtime/sourceMaps.js':
       /*!************************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/sourceMaps.js ***!
   \************************************************************/
       /***/ (module) => {
-        "use strict";
-
         module.exports = function (item) {
           var content = item[1];
           var cssMapping = item[3];
           if (!cssMapping) {
             return content;
           }
-          if (typeof btoa === "function") {
+          if (typeof btoa === 'function') {
             var base64 = btoa(
               unescape(encodeURIComponent(JSON.stringify(cssMapping)))
             );
             var data =
-              "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(
+              'sourceMappingURL=data:application/json;charset=utf-8;base64,'.concat(
                 base64
               );
-            var sourceMapping = "/*# ".concat(data, " */");
-            return [content].concat([sourceMapping]).join("\n");
+            var sourceMapping = '/*# '.concat(data, ' */');
+            return [content].concat([sourceMapping]).join('\n');
           }
-          return [content].join("\n");
+          return [content].join('\n');
         };
 
         /***/
       },
 
-    /***/ "./src/style.css":
+    /***/ './src/style.css':
       /*!***********************!*\
   !*** ./src/style.css ***!
   \***********************/
@@ -200,7 +196,6 @@
         __webpack_exports__,
         __webpack_require__
       ) => {
-        "use strict";
         __webpack_require__.r(__webpack_exports__);
         /* harmony export */ __webpack_require__.d(__webpack_exports__, {
           /* harmony export */ default: () => __WEBPACK_DEFAULT_EXPORT__,
@@ -208,7 +203,7 @@
         });
         /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(
-            /*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js"
+            /*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ './node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js'
           );
         /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default =
           /*#__PURE__*/ __webpack_require__.n(
@@ -216,7 +211,7 @@
           );
         /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ =
           __webpack_require__(
-            /*! !../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js"
+            /*! !../node_modules/style-loader/dist/runtime/styleDomAPI.js */ './node_modules/style-loader/dist/runtime/styleDomAPI.js'
           );
         /* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default =
           /*#__PURE__*/ __webpack_require__.n(
@@ -224,7 +219,7 @@
           );
         /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ =
           __webpack_require__(
-            /*! !../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js"
+            /*! !../node_modules/style-loader/dist/runtime/insertBySelector.js */ './node_modules/style-loader/dist/runtime/insertBySelector.js'
           );
         /* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default =
           /*#__PURE__*/ __webpack_require__.n(
@@ -232,7 +227,7 @@
           );
         /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ =
           __webpack_require__(
-            /*! !../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js"
+            /*! !../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ './node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js'
           );
         /* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default =
           /*#__PURE__*/ __webpack_require__.n(
@@ -240,7 +235,7 @@
           );
         /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ =
           __webpack_require__(
-            /*! !../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js"
+            /*! !../node_modules/style-loader/dist/runtime/insertStyleElement.js */ './node_modules/style-loader/dist/runtime/insertStyleElement.js'
           );
         /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default =
           /*#__PURE__*/ __webpack_require__.n(
@@ -248,7 +243,7 @@
           );
         /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ =
           __webpack_require__(
-            /*! !../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js"
+            /*! !../node_modules/style-loader/dist/runtime/styleTagTransform.js */ './node_modules/style-loader/dist/runtime/styleTagTransform.js'
           );
         /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default =
           /*#__PURE__*/ __webpack_require__.n(
@@ -256,7 +251,7 @@
           );
         /* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__ =
           __webpack_require__(
-            /*! !!../node_modules/css-loader/dist/cjs.js!./style.css */ "./node_modules/css-loader/dist/cjs.js!./src/style.css"
+            /*! !!../node_modules/css-loader/dist/cjs.js!./style.css */ './node_modules/css-loader/dist/cjs.js!./src/style.css'
           );
 
         var options = {};
@@ -269,7 +264,7 @@
         options.insert =
           _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(
             null,
-            "head"
+            'head'
           );
 
         options.domAPI =
@@ -280,33 +275,31 @@
         var update =
           _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(
             _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__[
-              "default"
+              'default'
             ],
             options
           );
 
         /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ =
           _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__[
-            "default"
+            'default'
           ] &&
           _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__[
-            "default"
+            'default'
           ].locals
             ? _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__[
-                "default"
+                'default'
               ].locals
             : undefined;
 
         /***/
       },
 
-    /***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+    /***/ './node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js':
       /*!****************************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
   \****************************************************************************/
       /***/ (module) => {
-        "use strict";
-
         var stylesInDOM = [];
 
         function getIndexByIdentifier(identifier) {
@@ -330,7 +323,7 @@
             var item = list[i];
             var id = options.base ? item[0] + options.base : item[0];
             var count = idCountMap[id] || 0;
-            var identifier = "".concat(id, " ").concat(count);
+            var identifier = ''.concat(id, ' ').concat(count);
             idCountMap[id] = count + 1;
             var indexByIdentifier = getIndexByIdentifier(identifier);
             var obj = {
@@ -419,18 +412,16 @@
         /***/
       },
 
-    /***/ "./node_modules/style-loader/dist/runtime/insertBySelector.js":
+    /***/ './node_modules/style-loader/dist/runtime/insertBySelector.js':
       /*!********************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/insertBySelector.js ***!
   \********************************************************************/
       /***/ (module) => {
-        "use strict";
-
         var memo = {};
         /* istanbul ignore next  */
 
         function getTarget(target) {
-          if (typeof memo[target] === "undefined") {
+          if (typeof memo[target] === 'undefined') {
             var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
 
             if (
@@ -471,16 +462,14 @@
         /***/
       },
 
-    /***/ "./node_modules/style-loader/dist/runtime/insertStyleElement.js":
+    /***/ './node_modules/style-loader/dist/runtime/insertStyleElement.js':
       /*!**********************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
   \**********************************************************************/
       /***/ (module) => {
-        "use strict";
-
         /* istanbul ignore next  */
         function insertStyleElement(options) {
-          var element = document.createElement("style");
+          var element = document.createElement('style');
           options.setAttributes(element, options.attributes);
           options.insert(element, options.options);
           return element;
@@ -491,19 +480,17 @@
         /***/
       },
 
-    /***/ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
+    /***/ './node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js':
       /*!**********************************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
   \**********************************************************************************/
       /***/ (module, __unused_webpack_exports, __webpack_require__) => {
-        "use strict";
-
         /* istanbul ignore next  */
         function setAttributesWithoutAttributes(styleElement) {
           var nonce = true ? __webpack_require__.nc : 0;
 
           if (nonce) {
-            styleElement.setAttribute("nonce", nonce);
+            styleElement.setAttribute('nonce', nonce);
           }
         }
 
@@ -512,55 +499,53 @@
         /***/
       },
 
-    /***/ "./node_modules/style-loader/dist/runtime/styleDomAPI.js":
+    /***/ './node_modules/style-loader/dist/runtime/styleDomAPI.js':
       /*!***************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
   \***************************************************************/
       /***/ (module) => {
-        "use strict";
-
         /* istanbul ignore next  */
         function apply(styleElement, options, obj) {
-          var css = "";
+          var css = '';
 
           if (obj.supports) {
-            css += "@supports (".concat(obj.supports, ") {");
+            css += '@supports ('.concat(obj.supports, ') {');
           }
 
           if (obj.media) {
-            css += "@media ".concat(obj.media, " {");
+            css += '@media '.concat(obj.media, ' {');
           }
 
-          var needLayer = typeof obj.layer !== "undefined";
+          var needLayer = typeof obj.layer !== 'undefined';
 
           if (needLayer) {
-            css += "@layer".concat(
-              obj.layer.length > 0 ? " ".concat(obj.layer) : "",
-              " {"
+            css += '@layer'.concat(
+              obj.layer.length > 0 ? ' '.concat(obj.layer) : '',
+              ' {'
             );
           }
 
           css += obj.css;
 
           if (needLayer) {
-            css += "}";
+            css += '}';
           }
 
           if (obj.media) {
-            css += "}";
+            css += '}';
           }
 
           if (obj.supports) {
-            css += "}";
+            css += '}';
           }
 
           var sourceMap = obj.sourceMap;
 
-          if (sourceMap && typeof btoa !== "undefined") {
+          if (sourceMap && typeof btoa !== 'undefined') {
             css +=
-              "\n/*# sourceMappingURL=data:application/json;base64,".concat(
+              '\n/*# sourceMappingURL=data:application/json;base64,'.concat(
                 btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))),
-                " */"
+                ' */'
               );
           } // For old IE
 
@@ -596,13 +581,11 @@
         /***/
       },
 
-    /***/ "./node_modules/style-loader/dist/runtime/styleTagTransform.js":
+    /***/ './node_modules/style-loader/dist/runtime/styleTagTransform.js':
       /*!*********************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
   \*********************************************************************/
       /***/ (module) => {
-        "use strict";
-
         /* istanbul ignore next  */
         function styleTagTransform(css, styleElement) {
           if (styleElement.styleSheet) {
@@ -617,51 +600,6 @@
         }
 
         module.exports = styleTagTransform;
-
-        /***/
-      },
-
-    /***/ "./src/fetch.js":
-      /*!**********************!*\
-  !*** ./src/fetch.js ***!
-  \**********************/
-      /***/ () => {
-        const img = document.querySelector("img");
-        const searchBtn = document.querySelector(".search-btn");
-        const refreshBtn = document.querySelector(".refresh-btn");
-
-        // // USING PROMISES DIRECTLY
-        // const getImg = function getImgfromGiphyAPI(search) {
-        //     let userSearch = document.querySelector('#user-search').value;
-
-        //     search = userSearch ? userSearch : 'cats';
-
-        //     fetch(`https://api.giphy.com/v1/gifs/translate?api_key=MYKEYHERE&s=${search}`, {mode: 'cors'})
-        //         .then((response) => response.json())
-        //         .then((response) => img.src = response.data.images.original.url)
-        //         .catch((error) => console.log(error));
-        // }
-
-        // USING PROMISES VIA ASYNC/AWAIT
-        const getImg = async function getImgfromGiphyAPI(search) {
-          let userSearch = document.querySelector("#user-search").value;
-          search = userSearch ? userSearch : "cats";
-          try {
-            const response = await fetch(
-              `https://api.giphy.com/v1/gifs/translate?api_key=gSwGOyzsRFnpkZDzVzWo8PbsOIMKdBSd&s=${search}`,
-              { mode: "cors" }
-            );
-            const gifData = await response.json();
-            img.src = gifData.data.images.original.url;
-          } catch (error) {
-            console.log(error);
-          }
-        };
-
-        getImg();
-
-        searchBtn.addEventListener("click", getImg);
-        refreshBtn.addEventListener("click", getImg);
 
         /***/
       },
@@ -707,7 +645,7 @@
     /******/ __webpack_require__.n = (module) => {
       /******/ var getter =
         module && module.__esModule
-          ? /******/ () => module["default"]
+          ? /******/ () => module['default']
           : /******/ () => module;
       /******/ __webpack_require__.d(getter, { a: getter });
       /******/ return getter;
@@ -749,13 +687,13 @@
   /******/ (() => {
     /******/ // define __esModule on exports
     /******/ __webpack_require__.r = (exports) => {
-      /******/ if (typeof Symbol !== "undefined" && Symbol.toStringTag) {
+      /******/ if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
         /******/ Object.defineProperty(exports, Symbol.toStringTag, {
-          value: "Module",
+          value: 'Module',
         });
         /******/
       }
-      /******/ Object.defineProperty(exports, "__esModule", { value: true });
+      /******/ Object.defineProperty(exports, '__esModule', { value: true });
       /******/
     };
     /******/
@@ -769,32 +707,28 @@
   /******/
   /************************************************************************/
   var __webpack_exports__ = {};
-  // This entry need to be wrapped in an IIFE because it need to be in strict mode.
+  // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
   (() => {
-    "use strict";
     /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
     __webpack_require__.r(__webpack_exports__);
     /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ =
-      __webpack_require__(/*! ./style.css */ "./src/style.css");
-    /* harmony import */ var _fetch__WEBPACK_IMPORTED_MODULE_1__ =
-      __webpack_require__(/*! ./fetch */ "./src/fetch.js");
-    /* harmony import */ var _fetch__WEBPACK_IMPORTED_MODULE_1___default =
-      /*#__PURE__*/ __webpack_require__.n(_fetch__WEBPACK_IMPORTED_MODULE_1__);
+      __webpack_require__(/*! ./style.css */ './src/style.css');
 
-    // import toggleDropdown from './dropdown';
+    const name = 'James';
 
-    const loadJson = async function loadJsonFromUrl(url) {
-      const response = await _fetch__WEBPACK_IMPORTED_MODULE_1___default()(url);
-      const responseData = await function () {
-        try {
-          return response.json();
-        } catch (err) {
-          alert(err);
-        }
-      };
+    const person = { first: name };
+
+    console.log(person);
+
+    const sayHelloLinting = (fName) => {
+      console.log(`Hello linting, ${fName}`);
     };
+
+    sayHelloLinting('Adrien');
+
+    const test = 'Hello';
   })();
 
   /******/

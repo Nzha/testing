@@ -11,5 +11,3 @@ const sayHelloLinting = (fName) => {
 };
 
 sayHelloLinting('Adrien');
-
-const test = 'haha';

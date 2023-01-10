@@ -1,15 +1,15 @@
-const img = document.querySelector("img");
-const searchBtn = document.querySelector(".search-btn");
-const refreshBtn = document.querySelector(".refresh-btn");
+const img = document.querySelector('img');
+const searchBtn = document.querySelector('.search-btn');
+const refreshBtn = document.querySelector('.refresh-btn');
 
 // USING PROMISES VIA ASYNC/AWAIT
 const getImg = async function getImgfromGiphyAPI(search) {
-  let userSearch = document.querySelector("#user-search").value;
-  search = userSearch ? userSearch : "cats";
+  const userSearch = document.querySelector('#user-search').value;
+  search = userSearch || 'cats';
   try {
     const response = await fetch(
       `https://api.giphy.com/v1/gifs/translate?api_key=gSwGOyzsRFnpkZDzVzWo8PbsOIMKdBSd&s=${search}`,
-      { mode: "cors" }
+      { mode: 'cors' }
     );
     const gifData = await response.json();
     img.src = gifData.data.images.original.url;
@@ -20,13 +20,13 @@ const getImg = async function getImgfromGiphyAPI(search) {
 
 function handleError(fn) {
   return function (...params) {
-    return fn(...params).catch(function (err) {
-      console.log("oops", err);
+    return fn(...params).catch((err) => {
+      console.log('oops', err);
     });
   };
 }
 
 getImg();
 
-searchBtn.addEventListener("click", getImg);
-refreshBtn.addEventListener("click", getImg);
+searchBtn.addEventListener('click', getImg);
+refreshBtn.addEventListener('click', getImg);
