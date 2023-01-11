@@ -1,9 +1,9 @@
 import './style.css';
 
-function collatz(n) {
-  if (n === 1) return 0;
-  if (n % 2 === 0) return 1 + collatz(n / 2);
-  if (n % 2 !== 0) return 1 + collatz(3 * n + 1);
+function productOfArray(arr) {
+  if (arr.length === 0) return 1;
+  return (arr[arr.length - 1]) * productOfArray(arr.slice(0, -1))
 }
 
-console.log(collatz(27));
+const sixty = productOfArray([1, 2, 3, 10]);
+console.log(sixty);
