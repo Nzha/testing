@@ -590,38 +590,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 
 
-const list = {
-  value: 1,
-  next: {
-    value: 2,
-    next: {
-      value: 3,
-      next: {
-        value: 4,
-        next: null,
-      },
-    },
-  },
-};
-
-function printList(list) {
-  let tmp = list;
-
-  while (tmp) {
-    console.log(tmp.value);
-    tmp = tmp.next;
+function countDown(n) {
+  for (let i = n; i > 0; i--) {
+    console.log(i);
   }
 }
 
-function printList2(list) {
-  console.log(list.value);
-  if (list.next) {
-    printList2(list.next);
-  }
+// console.log(countDown(5));
+
+function countDownRecursive(n) {
+  console.log(n);
+  return n !== 0 ? countDownRecursive(n - 1) : n;
 }
 
-printList(list);
-printList2(list);
+countDownRecursive(8);
 
 })();
 
