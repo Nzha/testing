@@ -590,20 +590,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 
 
-function countDown(n) {
-  for (let i = n; i > 0; i--) {
-    console.log(i);
-  }
+function collatz(n) {
+  if (n === 1) return 0;
+  if (n % 2 === 0) return 1 + collatz(n / 2);
+  if (n % 2 !== 0) return 1 + collatz(3 * n + 1);
 }
 
-// console.log(countDown(5));
-
-function countDownRecursive(n) {
-  console.log(n);
-  return n !== 0 ? countDownRecursive(n - 1) : n;
-}
-
-countDownRecursive(8);
+console.log(collatz(27));
 
 })();
 
