@@ -590,26 +590,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 
 
-// let count = 0;
+// let total = 0;
 
-function totalIntegers(array){
-	if(array.length === 0) return 0;
+function SumSquares(array) {
+  if (array.length === 0) return 0;
 
-	let total = 0;
-	let first = array.shift();
+  let total = 0;
+  const first = array.shift();
 
-	if (Array.isArray(first)){
-		total += totalIntegers(first); 
-	} else if (Number.isInteger(first)) {
-		total += 1;
-	}
+  if (Array.isArray(first)) {
+    total += SumSquares(first);
+  } else {
+    total += first * first;
+  }
 
-	return total + totalIntegers(array);
+  return total + SumSquares(array);
 }
 
-const seven = totalIntegers([[[5], 3], 0, 2, ['foo'], [], [4, [5, 6]]]); // 7
+let l = [1, 2, 3];
+console.log(SumSquares(l)); // 1 + 4 + 9 = 14
 
-console.log(seven);
+SumSquares(l);
+
+l = [[1, 2], 3];
+console.log(SumSquares(l)); // 1 + 4 + 9 = 14
+
+
+l = [[[[[[[[[1]]]]]]]]];
+console.log(SumSquares(l)); // 1 = 1
+
+l = [10, [[10], 10], [10]];
+console.log(SumSquares(l)); // 100 + 100 + 100 + 100 = 400
 
 })();
 

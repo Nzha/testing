@@ -1,20 +1,33 @@
 import './style.css';
 
-function totalIntegers(array){
-	if(array.length === 0) return 0;
+// let total = 0;
 
-	let total = 0;
-	let first = array.shift();
+function SumSquares(array) {
+  if (array.length === 0) return 0;
 
-	if (Array.isArray(first)){
-		total += totalIntegers(first); 
-	} else if (Number.isInteger(first)) {
-		total += 1;
-	}
+  let total = 0;
+  const first = array.shift();
 
-	return total + totalIntegers(array);
+  if (Array.isArray(first)) {
+    total += SumSquares(first);
+  } else {
+    total += first * first;
+  }
+
+  return total + SumSquares(array);
 }
 
-const seven = totalIntegers([[[5], 3], 0, 2, ['foo'], [], [4, [5, 6]]]); // 7
+let l = [1, 2, 3];
+console.log(SumSquares(l)); // 1 + 4 + 9 = 14
 
-console.log(seven);
+SumSquares(l);
+
+l = [[1, 2], 3];
+console.log(SumSquares(l)); // 1 + 4 + 9 = 14
+
+
+l = [[[[[[[[[1]]]]]]]]];
+console.log(SumSquares(l)); // 1 = 1
+
+l = [10, [[10], 10], [10]];
+console.log(SumSquares(l)); // 100 + 100 + 100 + 100 = 400
