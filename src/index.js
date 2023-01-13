@@ -1,11 +1,28 @@
 import './style.css';
 
-function replicate(times, number) {
-  if (times <= 0) return [];
+// function fibs(n) {
+//   const result = n <= 1 ? n : fibs(n - 1) + fibs(n - 2);
+//   console.log(result);
+//   return result;
+// }
 
-  return [number].concat(replicate(times - 1, number));
+// const arr = [];
+
+function fibs(n) {
+  const arr = [];
+  let a = 1;
+  let b = 1;
+
+  arr.push(0, a, b);
+
+  for (let i = 3; i < n; i++) {
+    const c = a + b;
+    a = b;
+    b = c;
+    arr.push(b);
+  }
+
+  return arr;
 }
 
-console.log(replicate(3, 5)); // [5, 5, 5]
-console.log(replicate(1, 69)); // [69]
-console.log(replicate(-2, 6)); // []
+console.log(fibs(9));
