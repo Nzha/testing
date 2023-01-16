@@ -590,45 +590,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 
 
-function fibs(n) {
-  const arr = [];
+const primes = [
+  2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
+  73, 79, 83, 89, 97,
+];
 
-  let a = 1;
-  let b = 1;
+function doSearch(array, target) {
+  let min = 0;
+  let max = array.length - 1;
+  let guess;
 
-  arr.push(0, 1, 1);
-
-  for (let i = 3; i < n; i++) {
-    const c = a + b;
-    a = b;
-    b = c;
-    arr.push(b);
+  while (min <= max) {
+    guess = Math.floor((min + max) / 2);
+    if (array[guess] === target) {
+      return guess;
+    }
+    if (array[guess] < target) {
+      min = guess + 1;
+    } else {
+      max = guess - 1;
+    }
   }
-
-  return arr;
+  return -1;
 }
 
-function fibsRec(n) {
-  if (n === 1) return [0];
-  if (n === 2) return [0, 1];
-  return [...fibsRec(n - 1), fibsRec(n - 1)[n - 2] + fibsRec(n - 1)[n - 3]];
-}
-
-// console.log(fibs(8));
-// console.log(fibsRec(8));
-
-// A3 = [0, 1, 1]
-// A4 = [0, 1, 1, 2]
-// A5 = [0, 1, 1, 2, 3]
-// A6 = [0, 1, 1, 2, 3, 5]
-
-// A3 = [A2, 1]
-// A4 = [A3, 2]
-// A5 = [A4, 3]
-// A6 = [A5, 5]
-
-// arr N = [arr(n - 1), F(n - 1)]
-// F(n - 1) = F(n - 2) + F(n - 3)
+const result = doSearch(primes, 73);
+console.log(`Found prime at index ${result}`);
 
 })();
 
