@@ -590,24 +590,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 
 
-const testArray = [7, 9, 4];
+const array = [18, 6, 66, 44, 9, 22, 14];
 
-const swap = function (array, firstIndex, secondIndex) {
-  const temp = array[firstIndex];
+const indexOfMinimum = function (array, startIndex) {
+  let minValue = array[startIndex];
+  let minIndex = startIndex;
 
-  array[firstIndex] = array[secondIndex];
-  array[secondIndex] = temp;
+  for (let i = startIndex + 1; i < array.length; i++) {
+    if (array[i] < minValue) {
+      minValue = array[i];
+      minIndex = i;
+    }
+  }
+
+  return minIndex;
 };
 
-swap(testArray, 0, 1);
+const index = indexOfMinimum(array, 2);
 
-console.log(testArray);
+console.log(
+  `The index of the minimum value of the subarray starting at index 2 is ${index}.`
+);
 
-// a,b
-
-// a = c
-// c = b
-// a = b
 
 })();
 
