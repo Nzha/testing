@@ -590,32 +590,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 
 
-const primes = [
-  2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71,
-  73, 79, 83, 89, 97,
-];
+const testArray = [7, 9, 4];
 
-function doSearch(array, target) {
-  let min = 0;
-  let max = array.length - 1;
-  let guess;
+const swap = function (array, firstIndex, secondIndex) {
+  const temp = array[firstIndex];
 
-  while (min <= max) {
-    guess = Math.floor((min + max) / 2);
-    if (array[guess] === target) {
-      return guess;
-    }
-    if (array[guess] < target) {
-      min = guess + 1;
-    } else {
-      max = guess - 1;
-    }
-  }
-  return -1;
-}
+  array[firstIndex] = array[secondIndex];
+  array[secondIndex] = temp;
+};
 
-const result = doSearch(primes, 73);
-console.log(`Found prime at index ${result}`);
+swap(testArray, 0, 1);
+
+console.log(testArray);
+
+// a,b
+
+// a = c
+// c = b
+// a = b
 
 })();
 
