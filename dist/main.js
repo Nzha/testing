@@ -590,7 +590,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 
 
-const array = [18, 6, 66, 44, 9, 22, 14];
+const array = [22, 11, 99, 88, 9, 7, 42];
+
+const swap = function (array, firstIndex, secondIndex) {
+  const temp = array[firstIndex];
+  array[firstIndex] = array[secondIndex];
+  array[secondIndex] = temp;
+};
 
 const indexOfMinimum = function (array, startIndex) {
   let minValue = array[startIndex];
@@ -606,12 +612,18 @@ const indexOfMinimum = function (array, startIndex) {
   return minIndex;
 };
 
-const index = indexOfMinimum(array, 2);
+const selectionSort = function (array) {
+  let temp;
 
-console.log(
-  `The index of the minimum value of the subarray starting at index 2 is ${index}.`
-);
+  for (let i = 0; i < array.length; i++) {
+    temp = indexOfMinimum(array, i);
+    swap(array, temp, i);
+  }
+};
 
+selectionSort(array);
+
+console.log(`Array after sorting:  ${array}`);
 
 })();
 
