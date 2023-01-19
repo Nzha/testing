@@ -590,40 +590,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ "./src/style.css");
 
 
-const array = [22, 11, 99, 88, 9, 7, 42];
+const edgeList = [
+  [0, 2],
+  [1, 3],
+  [2, 3],
+  [2, 4],
+  [3, 5],
+  [4, 5],
+];
 
-const swap = function (array, firstIndex, secondIndex) {
-  const temp = array[firstIndex];
-  array[firstIndex] = array[secondIndex];
-  array[secondIndex] = temp;
-};
+const adjMatrix = [
+  [0, 0, 1, 0, 0, 0],
+  [0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 1, 1, 0],
+  [0, 0, 0, 0, 0, 1],
+  [0, 0, 0, 0, 0, 1],
+  [0, 0, 0, 0, 0, 0],
+];
 
-const indexOfMinimum = function (array, startIndex) {
-  let minValue = array[startIndex];
-  let minIndex = startIndex;
-
-  for (let i = startIndex + 1; i < array.length; i++) {
-    if (array[i] < minValue) {
-      minValue = array[i];
-      minIndex = i;
-    }
-  }
-
-  return minIndex;
-};
-
-const selectionSort = function (array) {
-  let temp;
-
-  for (let i = 0; i < array.length; i++) {
-    temp = indexOfMinimum(array, i);
-    swap(array, temp, i);
-  }
-};
-
-selectionSort(array);
-
-console.log(`Array after sorting:  ${array}`);
+const adjList = [[2], [3], [3, 4], [5], [5], []];
 
 })();
 
