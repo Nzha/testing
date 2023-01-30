@@ -18,7 +18,6 @@ const getCurrentWeather = async function getCurrentWeatherDataFromCoords(coords,
   const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKey}&units=${units}`, {mode: 'cors'});
   const weatherData = await weatherResponse.json();
   console.log(weatherData);
-
   return weatherData;
 }
 
