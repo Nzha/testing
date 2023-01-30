@@ -1,4 +1,5 @@
-function orderTotal(order) {
+function orderTotal(fetch, order) {
+  fetch('https://api.openweathermap.org/geo/1.0/direct');
   return Promise.resolve(
     order.items.reduce((prev, cur) => cur.price * (cur.quantity || 1) + prev, 0)
   );
