@@ -1,30 +1,41 @@
 import './style.css';
 
-import React, { Component } from 'react';
+import { useState } from 'react';
+import { sculptureList } from './data.js';
 
-class App extends Component {
-  constructor() {
-    super();
+export default function Gallery() {
+  const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
 
-    this.state = {
-      count: 0,
-    };
-
-    this.countUp = this.countUp.bind(this);
+  function handleNextClick() {
+    setIndex(index + 1);
   }
 
-  countUp() {
-    this.setState({
-      count: this.state.count + 1,
-    });
+  function handleMoreClick() {
+    setShowMore(!showMore);
   }
 
-  render() {
-    return (
-      <div>
-        <button onClick={this.countUp}>Click Me!</button>
-        <p>{this.state.count}</p>
-      </div>
-    );
-  }
+  let sculpture = sculptureList[index];
+  return (
+    <>
+      <button onClick={handleNextClick}>
+        Next
+      </button>
+      <h2>
+        <i>{sculpture.name} </i> 
+        by {sculpture.artist}
+      </h2>
+      <h3>  
+        ({index + 1} of {sculptureList.length})
+      </h3>
+      <button onClick={handleMoreClick}>
+        {showMore ? 'Hide' : 'Show'} details
+      </button>
+      {showMore && <p>{sculpture.description}</p>}
+      <img 
+        src={sculpture.url} 
+        alt={sculpture.alt}
+      />
+    </>
+  );
 }
