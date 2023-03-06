@@ -1,37 +1,48 @@
 import './style.css';
 import { useState } from 'react';
 
-let nextID = 0;
+let nextId = 0;
 
-function InputBar() {
+function TodoTable() {
   const [name, setName] = useState('');
-  const [tasks, setTask] = useState([]);
+  const [todos, setTodos] = useState([]);
 
-  function handleClick() {
-    setName('');
-    setTask([...tasks, { id: nextID++, name: name }]);
+  function handleDelete(todo) {
+    setTodos(todos.filter((a) => a.id !== todo.id));
   }
+
+  function handleAdd() {
+    setName('');
+    setTodos([...todos, { id: nextId++, name: name }]);
+  }
+
   return (
     <div>
-      <input
-        value={name}
-        type="text"
-        placeholder="Add task"
-        onChange={(e) => setName(e.target.value)}
-      />
-      <button onClick={handleClick}>Add</button>
-      <List tasks={tasks} />
+      <input value={name} onChange={(e) => setName(e.target.value)} />
+      <button onClick={handleAdd}>Add</button>
+      <TodoList todos={todos} handleDelete={handleDelete} />
     </div>
   );
 }
 
-function List({ tasks }) {
-  const listTasks = tasks.map((task) => <li key={task.id}>{task.name}</li>);
-  return <ul>{listTasks}</ul>;
+function TodoList({ todos, handleDelete }) {
+  const list = todos.map((todo) => (
+    <li key={todo.id}>
+      {todo.name}{' '}
+      <button
+        onClick={() => {
+          handleDelete(todo);
+        }}
+      >
+        Delete
+      </button>
+    </li>
+  ));
+  return <ul>{list}</ul>;
 }
 
 function App() {
-  return <InputBar />;
+  return <TodoTable />;
 }
 
 export default App;
