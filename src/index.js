@@ -14,13 +14,14 @@ function TodoTable() {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
 
-  function handleAdd() {
+  function handleAddTodo() {
+    if (!name) return;
     setName('');
     setTodos([...todos, { id: uuidv4(), name: name, complete: false }]);
   }
 
-  function handleDelete(todo) {
-    setTodos(todos.filter((a) => a.id !== todo.id));
+  function handleDeleteTodo(id) {
+    setTodos(todos.filter((a) => a.id !== id));
   }
 
   function handleCheck(id) {
@@ -31,7 +32,7 @@ function TodoTable() {
   }
 
   function handleClearComplete() {
-    setTodos(todos.filter(todo => todo.complete === false))
+    setTodos(todos.filter((todo) => !todo.complete));
   }
 
   function handleClearAll() {
@@ -41,37 +42,35 @@ function TodoTable() {
   return (
     <div>
       <input value={name} onChange={(e) => setName(e.target.value)} />
-      <button onClick={handleAdd}>Add</button>
+      <button onClick={handleAddTodo}>Add</button>
       <div>
-        <button onClick={handleClearComplete}>Clear Complete</button>
-        <button onClick={handleClearAll}>Clear All</button>
+        <button onClick={handleClearComplete}>Clear complete</button>
+        <button onClick={handleClearAll}>Clear all</button>
       </div>
-      <div>
-        You have {todos.filter(todo => !todo.complete).length} tasks left
-      </div>
+      <div>{todos.filter((todo) => !todo.complete).length} left to do</div>
       <TodoList
         todos={todos}
-        handleDelete={handleDelete}
+        handleDeleteTodo={handleDeleteTodo}
         handleCheck={handleCheck}
       />
     </div>
   );
 }
 
-function TodoList({ todos, handleDelete, handleCheck }) {
+function TodoList({ todos, handleDeleteTodo, handleCheck }) {
   return todos.map((todo) => {
     return (
       <Todo
         key={todo.id}
         todo={todo}
-        handleDelete={handleDelete}
+        handleDeleteTodo={handleDeleteTodo}
         handleCheck={handleCheck}
       />
     );
   });
 }
 
-function Todo({ todo, handleDelete, handleCheck }) {
+function Todo({ todo, handleDeleteTodo, handleCheck }) {
   return (
     <div>
       <label id={todo.id}>
@@ -85,7 +84,7 @@ function Todo({ todo, handleDelete, handleCheck }) {
         {todo.name}{' '}
         <button
           onClick={() => {
-            handleDelete(todo);
+            handleDeleteTodo(todo.id);
           }}
         >
           Delete
@@ -100,3 +99,4 @@ function App() {
 }
 
 export default App;
+
