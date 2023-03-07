@@ -1,10 +1,18 @@
 import './style.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 function TodoTable() {
   const [name, setName] = useState('');
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const storedTodos = JSON.parse(localStorage.getItem('todos'));
+    return storedTodos || [];
+  });
+
+  // Save todos in local storage every time a change in todos occurs
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   function handleAdd() {
     setName('');
@@ -22,10 +30,25 @@ function TodoTable() {
     setTodos(newTodos);
   }
 
+  function handleClearComplete() {
+    setTodos(todos.filter(todo => todo.complete === false))
+  }
+
+  function handleClearAll() {
+    setTodos([]);
+  }
+
   return (
     <div>
       <input value={name} onChange={(e) => setName(e.target.value)} />
       <button onClick={handleAdd}>Add</button>
+      <div>
+        <button onClick={handleClearComplete}>Clear Complete</button>
+        <button onClick={handleClearAll}>Clear All</button>
+      </div>
+      <div>
+        You have {todos.filter(todo => !todo.complete).length} tasks left
+      </div>
       <TodoList
         todos={todos}
         handleDelete={handleDelete}
@@ -77,4 +100,3 @@ function App() {
 }
 
 export default App;
-
