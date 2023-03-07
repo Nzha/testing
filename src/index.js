@@ -39,6 +39,13 @@ function TodoTable() {
     setTodos([]);
   }
 
+  function handleEdit(id, name) {
+    const newTodos = [...todos];
+    const todo = newTodos.find((a) => a.id === id);
+    todo.name = name;
+    setTodos(newTodos);
+  }
+
   return (
     <div>
       <input value={name} onChange={(e) => setName(e.target.value)} />
@@ -52,12 +59,13 @@ function TodoTable() {
         todos={todos}
         handleDeleteTodo={handleDeleteTodo}
         handleCheck={handleCheck}
+        handleEdit={handleEdit}
       />
     </div>
   );
 }
 
-function TodoList({ todos, handleDeleteTodo, handleCheck }) {
+function TodoList({ todos, handleDeleteTodo, handleCheck, handleEdit }) {
   return todos.map((todo) => {
     return (
       <Todo
@@ -65,12 +73,16 @@ function TodoList({ todos, handleDeleteTodo, handleCheck }) {
         todo={todo}
         handleDeleteTodo={handleDeleteTodo}
         handleCheck={handleCheck}
+        handleEdit={handleEdit}
       />
     );
   });
 }
 
-function Todo({ todo, handleDeleteTodo, handleCheck }) {
+function Todo({ todo, handleDeleteTodo, handleCheck, handleEdit }) {
+  const [editMode, setEditMode] = useState(false);
+  const [name, setName] = useState(todo.name);
+
   return (
     <div>
       <label id={todo.id}>
@@ -81,7 +93,25 @@ function Todo({ todo, handleDeleteTodo, handleCheck }) {
             handleCheck(todo.id);
           }}
         />
-        {todo.name}{' '}
+        {editMode ? (
+          <input
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+            autoFocus
+          />
+        ) : (
+          <span>{todo.name} </span>
+        )}
+        <button
+          onClick={() => {
+            setEditMode(!editMode);
+            handleEdit(todo.id, name);
+          }}
+        >
+          {editMode ? 'Save' : 'Edit'}
+        </button>
         <button
           onClick={() => {
             handleDeleteTodo(todo.id);
