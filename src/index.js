@@ -2,6 +2,8 @@ import './style.css';
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
+// Spend evening learning difference between Tailwind, Chakra and Mantine.
+
 function TodoTable() {
   const [name, setName] = useState('');
   const [todos, setTodos] = useState(() => {
