@@ -2,7 +2,7 @@ import './style.css';
 import { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-// Learned about React Component Lifecycle Methods
+// Learned about React Hooks
 
 function TodoTable() {
   const [name, setName] = useState('');
